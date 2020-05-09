@@ -1,7 +1,7 @@
 import requests
 
 target = input("Enter target: ")
-file = open("C:\\Users\\test\\Desktop\\SubdomainFinder\subdomains.txt")
+file = open("YOUR FILE PATH\subdomains.txt")
 c = file.read()
 subdomains = c.splitlines()
 
