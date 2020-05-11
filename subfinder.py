@@ -10,16 +10,17 @@ def user_input():
         print("You must write a domain")
     
     return options
+# Colors
+OKGREEN = '\033[92m'
+ENDC = '\033[0m'
 
+print(OKGREEN +"SubdomainFinder started to research..."+ENDC)
 target_info = user_input()
 target = target_info.target_domain
 file = open("YOUR_FILE_PATH_HERE\SubdomainFinder\\subdomains.txt") #CHANGE_THIS
 c = file.read()
 subdomains = c.splitlines()
 
-# Colors
-OKGREEN = '\033[92m'
-ENDC = '\033[0m'
 
 def find_subdomains(target):
     for subdomain in subdomains:
