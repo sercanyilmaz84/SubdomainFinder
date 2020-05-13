@@ -30,10 +30,12 @@ def find_subdomains(target):
         except requests.ConnectionError:
             pass
         else:
-            print(OKGREEN + "[+] Discovered subdomain:", url + ENDC)
+            print(OKGREEN + "\n[+] Discovered subdomain:", url + ENDC)
+            print (OKGREEN + url + "'s status code => "+ str(r.status_code) + ENDC)
 
             with open("YOUR_FILE_PATH_HERE\discovered.txt","a") as discovered_file: #CHANGE_THIS
                 discovered_file.write("\n" + url)
                 discovered_file.close()
 
 find_subdomains(target)
+print(OKGREEN+"\nGood Luck's ;) My Twitter => @sercan_yilmaz_"+ENDC)
