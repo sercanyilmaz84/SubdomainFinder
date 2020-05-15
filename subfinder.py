@@ -26,7 +26,7 @@ def find_subdomains(target):
     for subdomain in subdomains:
         url = f"http://{subdomain}.{target}"
         try:
-            requests.get(url)
+            r = requests.get(url)
         except requests.ConnectionError:
             pass
         else:
